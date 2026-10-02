@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امتحان المواد والمهارات اللغوية الشامل - م. إبراهيم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        h2 {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        
+        .question-box {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #219653;
+        }
+        
+        #results-container {
+            display: none;
+            background: #e8f8f5;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid #1abc9c;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        #retry-section {
+            display: none;
+            background: #fff8e1;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px dashed #f39c12;
+            margin-top: 30px;
+        }
+        
+        #retry-btn {
+            background-color: #e67e22;
+        }
+        
+        #retry-btn:hover {
+            background-color: #d35400;
+        }
+        
+        .score-box {
+            font-size: 20px;
+            margin: 15px 0;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>امتحان المواد والمهارات اللغوية الشامل</h1>
+        <form id="quizForm">
+
+            <!-- أولاً: مجموعة المفردات البيئية والطقس -->
+            <h2>أولاً: مجموعة المفردات البيئية والطقس</h2>
+
+            <div class="question-box" id="box-q1">
+                <div class="question-title">1. The weather is really weird. It's freezing cold one minute and then .................... hot the next.</div>
+                <label><input type="radio" name="q1" value="B"> A) freezing</label>
+                <label><input type="radio" name="q1" value="A"> B) blistering / boiling</label>
+                <label><input type="radio" name="q1" value="C"> C) torrential</label>
+                <label><input type="radio" name="q1" value="D"> D) scarce</label>
+            </div>
+
+            <div class="question-box" id="box-q2">
+                <div class="question-title">2. Pollution in the atmosphere results in .................... rain.</div>
+                <label><input type="radio" name="q2" value="B"> A) toxic</label>
+                <label><input type="radio" name="q2" value="C"> B) clean</label>
+                <label><input type="radio" name="q2" value="A"> C) acid</label>
+                <label><input type="radio" name="q2" value="D"> D) fresh</label>
+            </div>
+
+            <div class="question-box" id="box-q3">
+                <div class="question-title">3. Soil .................... happens when the plants and trees that keep it in place are destroyed by the elements or man.</div>
+                <label><input type="radio" name="q3" value="D"> A) scarcity</label>
+                <label><input type="radio" name="q3" value="A"> B) erosion</label>
+                <label><input type="radio" name="q3" value="C"> C) turbine</label>
+                <label><input type="radio" name="q3" value="B"> D) layer</label>
+            </div>
+
+            <div class="question-box" id="box-q4">
+                <div class="question-title">4. The .................... heat caused the pavement to melt!</div>
+                <label><input type="radio" name="q4" value="C"> A) freezing</label>
+                <label><input type="radio" name="q4" value="D"> B) mild</label>
+                <label><input type="radio" name="q4" value="A"> C) blistering</label>
+                <label><input type="radio" name="q4" value="B"> D) cool</label>
+            </div>
+
+            <div class="question-box" id="box-q5">
+                <div class="question-title">5. Powerful wind .................... use wind power to create energy.</div>
+                <label><input type="radio" name="q5" value="D"> A) generators</label>
+                <label><input type="radio" name="q5" value="B"> B) panels</label>
+                <label><input type="radio" name="q5" value="C"> C) engines</label>
+                <label><input type="radio" name="q5" value="A"> D) turbines</label>
+            </div>
+
+            <div class="question-box" id="box-q6">
+                <div class="question-title">6. A good way of reducing .................... emissions is to promote the production of electric cars, which don't produce harmful exhaust .................... .</div>
+                <label><input type="radio" name="q6" value="A"> A) vehicle / greenhouse</label>
+                <label><input type="radio" name="q6" value="B"> B) water / gas</label>
+                <label><input type="radio" name="q6" value="C"> C) soil / smoke</label>
+                <label><input type="radio" name="q6" value="D"> D) noise / sound</label>
+            </div>
+
+            <div class="question-box" id="box-q7">
+                <div class="question-title">7. Because of global heating, .................... weather conditions are more common with periods of drought followed by .................... rain.</div>
+                <label><input type="radio" name="q7" value="B"> A) normal / steady</label>
+                <label><input type="radio" name="q7" value="A"> B) freak / torrential</label>
+                <label><input type="radio" name="q7" value="C"> C) steady / light</label>
+                <label><input type="radio" name="q7" value="D"> D) calm / heavy</label>
+            </div>
+
+            <div class="question-box" id="box-q8">
+                <div class="question-title">8. Below average rainfall can result in water .................... .</div>
+                <label><input type="radio" name="q8" value="C"> A) abundance</label>
+                <label><input type="radio" name="q8" value="D"> B) erosion</label>
+                <label><input type="radio" name="q8" value="A"> C) scarcity</label>
+                <label><input type="radio" name="q8" value="B"> D) layer</label>
+            </div>
+
+
+            <!-- ثانياً: مجموعة الأسماء المركبة -->
+            <h2>ثانياً: مجموعة الأسماء المركبة</h2>
+
+            <div class="question-box" id="box-q9">
+                <div class="question-title">9. Types of animals in danger of extinction:</div>
+                <label><input type="radio" name="q9" value="B"> A) Toxic waste</label>
+                <label><input type="radio" name="q9" value="A"> B) Endangered species</label>
+                <label><input type="radio" name="q9" value="C"> C) Renewable energy</label>
+                <label><input type="radio" name="q9" value="D"> D) Ozone layer</label>
+            </div>
+
+            <div class="question-box" id="box-q10">
+                <div class="question-title">10. Lack of water:</div>
+                <label><input type="radio" name="q10" value="C"> A) Wind turbine</label>
+                <label><input type="radio" name="q10" value="B"> B) Greenhouse effect</label>
+                <label><input type="radio" name="q10" value="A"> C) Water scarcity</label>
+                <label><input type="radio" name="q10" value="D"> D) Exhaust fumes</label>
+            </div>
+
+            <div class="question-box" id="box-q11">
+                <div class="question-title">11. Power produced by wind, sun, etc:</div>
+                <label><input type="radio" name="q11" value="D"> A) Toxic waste</label>
+                <label><input type="radio" name="q11" value="B"> B) Water scarcity</label>
+                <label><input type="radio" name="q11" value="A"> C) Renewable energy</label>
+                <label><input type="radio" name="q11" value="D"> D) Exhaust fumes</label>
+            </div>
+
+            <div class="question-box" id="box-q12">
+                <div class="question-title">12. A machine used to produce electric power:</div>
+                <label><input type="radio" name="q12" value="A"> A) Wind turbine</label>
+                <label><input type="radio" name="q12" value="B"> B) Ozone layer</label>
+                <label><input type="radio" name="q12" value="C"> C) Endangered species</label>
+                <label><input type="radio" name="q12" value="D"> D) Greenhouse effect</label>
+            </div>
+
+            <div class="question-box" id="box-q13">
+                <div class="question-title">13. Chemicals and other harmful waste products:</div>
+                <label><input type="radio" name="q13" value="B"> A) Renewable energy</label>
+                <label><input type="radio" name="q13" value="A"> B) Toxic waste</label>
+                <label><input type="radio" name="q13" value="C"> C) Water scarcity</label>
+                <label><input type="radio" name="q13" value="D"> D) Wind turbine</label>
+            </div>
+
+            <div class="question-box" id="box-q14">
+                <div class="question-title">14. Poisonous gases produced by engines of non-electric vehicles:</div>
+                <label><input type="radio" name="q14" value="C"> A) Ozone layer</label>
+                <label><input type="radio" name="q14" value="D"> B) Endangered species</label>
+                <label><input type="radio" name="q14" value="A"> C) Exhaust fumes</label>
+                <label><input type="radio" name="q14" value="B"> D) Greenhouse effect</label>
+            </div>
+
+            <div class="question-box" id="box-q15">
+                <div class="question-title">15. Part of the stratosphere which limits the amount of ultraviolet radiation reaching the Earth:</div>
+                <label><input type="radio" name="q15" value="D"> A) Toxic waste</label>
+                <label><input type="radio" name="q15" value="C"> B) Wind turbine</label>
+                <label><input type="radio" name="q15" value="B"> C) Water scarcity</label>
+                <label><input type="radio" name="q15" value="A"> D) Ozone layer</label>
+            </div>
+
+            <div class="question-box" id="box-q16">
+                <div class="question-title">16. Something trapped in the atmosphere which causes the planet to heat up:</div>
+                <label><input type="radio" name="q16" value="A"> A) Greenhouse effect</label>
+                <label><input type="radio" name="q16" value="B"> B) Renewable energy</label>
+                <label><input type="radio" name="q16" value="C"> C) Exhaust fumes</label>
+                <label><input type="radio" name="q16" value="D"> D) Endangered species</label>
+            </div>
+
+
+            <!-- ثالثاً: مجموعة صفات الحيوانات والكائنات الحية -->
+            <h2>ثالثاً: مجموعة صفات الحيوانات والكائنات الحية</h2>
+
+            <div class="question-box" id="box-q17">
+                <div class="question-title">17. Animals that are active at night are called ............................ animals.</div>
+                <label><input type="radio" name="q17" value="B"> A) solitary</label>
+                <label><input type="radio" name="q17" value="A"> B) nocturnal</label>
+                <label><input type="radio" name="q17" value="C"> C) marine</label>
+                <label><input type="radio" name="q17" value="D"> D) slimy</label>
+            </div>
+
+            <div class="question-box" id="box-q18">
+                <div class="question-title">18. A creature that lives alone and avoids others of its kind is a ............................ creature.</div>
+                <label><input type="radio" name="q18" value="C"> A) nocturnal</label>
+                <label><input type="radio" name="q18" value="A"> B) solitary</label>
+                <label><input type="radio" name="q18" value="B"> C) venomous</label>
+                <label><input type="radio" name="q18" value="D"> D) furry</label>
+            </div>
+
+            <div class="question-box" id="box-q19">
+                <div class="question-title">19. Some snakes and spiders are highly ............................ and can inject poison when they bite.</div>
+                <label><input type="radio" name="q19" value="D"> A) camouflaged</label>
+                <label><input type="radio" name="q19" value="C"> B) marine</label>
+                <label><input type="radio" name="q19" value="B"> C) solitary</label>
+                <label><input type="radio" name="q19" value="A"> D) venomous</label>
+            </div>
+
+            <div class="question-box" id="box-q20">
+                <div class="question-title">20. Octopuses and squids often leave a wet, ............................ trail.</div>
+                <label><input type="radio" name="q20" value="A"> A) slimy</label>
+                <label><input type="radio" name="q20" value="B"> B) furry</label>
+                <label><input type="radio" name="q20" value="C"> C) nocturnal</label>
+                <label><input type="radio" name="q20" value="D"> D) solitary</label>
+            </div>
+
+            <div class="question-box" id="box-q21">
+                <div class="question-title">21. Polar bears have thick, ............................ coats to keep them warm in freezing environments.</div>
+                <label><input type="radio" name="q21" value="C"> A) slimy</label>
+                <label><input type="radio" name="q21" value="B"> B) venomous</label>
+                <label><input type="radio" name="q21" value="A"> C) furry</label>
+                <label><input type="radio" name="q21" value="D"> D) marine</label>
+            </div>
+
+            <div class="question-box" id="box-q22">
+                <div class="question-title">22. Whales, dolphins, and sharks are examples of ............................ life forms.</div>
+                <label><input type="radio" name="q22" value="D"> A) nocturnal</label>
+                <label><input type="radio" name="q22" value="C"> B) solitary</label>
+                <label><input type="radio" name="q22" value="B"> C) furry</label>
+                <label><input type="radio" name="q22" value="A"> D) marine</label>
+            </div>
+
+            <div class="question-box" id="box-q23">
+                <div class="question-title">23. Insects that blend into their surroundings using natural colours are well ............................ .</div>
+                <label><input type="radio" name="q23" value="A"> A) camouflaged</label>
+                <label><input type="radio" name="q23" value="B"> B) venomous</label>
+                <label><input type="radio" name="q23" value="C"> C) slimy</label>
+                <label><input type="radio" name="q23" value="D"> D) nocturnal</label>
+            </div>
+
+
+            <!-- رابعاً: مجموعة إعادة صياغة الرسائل الرسمية -->
+            <h2>رابعاً: مجموعة إعادة صياغة الرسائل الرسمية</h2>
+
+            <div class="question-box" id="box-q24">
+                <div class="question-title">24. I heard that sea plastic is harming over 600 species. (Rewrite using estimated)</div>
+                <label><input type="radio" name="q24" value="B"> A) Sea plastic estimated to harm over 600 species.</label>
+                <label><input type="radio" name="q24" value="A"> B) It is estimated that sea plastic is harming over 600 species.</label>
+                <label><input type="radio" name="q24" value="C"> C) It estimated that sea plastic harms species.</label>
+                <label><input type="radio" name="q24" value="D"> D) Sea plastic is estimate to harm species.</label>
+            </div>
+
+            <div class="question-box" id="box-q25">
+                <div class="question-title">25. It's important to protect nature. (Rewrite using vital)</div>
+                <label><input type="radio" name="q25" value="C"> A) Nature is vital protected.</label>
+                <label><input type="radio" name="q25" value="B"> B) Vital is protecting nature.</label>
+                <label><input type="radio" name="q25" value="A"> C) It is vital to look after nature.</label>
+                <label><input type="radio" name="q25" value="D"> D) It is vital nature.</label>
+            </div>
+
+            <div class="question-box" id="box-q26">
+                <div class="question-title">26. You've got to stop using plastic! (Rewrite using urge)</div>
+                <label><input type="radio" name="q26" value="D"> A) Urge you stop plastic.</label>
+                <label><input type="radio" name="q26" value="C"> B) I am urging stop plastic.</label>
+                <label><input type="radio" name="q26" value="B"> C) You urge to stop plastic.</label>
+                <label><input type="radio" name="q26" value="A"> D) I urge you to stop using plastic.</label>
+            </div>
+
+            <div class="question-box" id="box-q27">
+                <div class="question-title">27. All the best, Ibrahim. (Rewrite using faithfully)</div>
+                <label><input type="radio" name="q27" value="A"> A) Yours faithfully, Ibrahim.</label>
+                <label><input type="radio" name="q27" value="B"> B) Faithfully yours, Ibrahim.</label>
+                <label><input type="radio" name="q27" value="C"> C) Faithfully, Ibrahim.</label>
+                <label><input type="radio" name="q27" value="D"> D) Your faithfully, Ibrahim.</label>
+            </div>
+
+            <div class="question-box" id="box-q28">
+                <div class="question-title">28. I'm really bothered by the amount of plastic use. (Rewrite using concerned)</div>
+                <label><input type="radio" name="q28" value="B"> A) Concerned I am about plastic use.</label>
+                <label><input type="radio" name="q28" value="A"> B) I am deeply concerned by the amount of plastic use.</label>
+                <label><input type="radio" name="q28" value="C"> C) I am concern about plastic.</label>
+                <label><input type="radio" name="q28" value="D"> D) Plastic use is concerned.</label>
+            </div>
+
+            <div class="question-box" id="box-q29">
+                <div class="question-title">29. Get rid of plastic packaging! (Rewrite using banned)</div>
+                <label><input type="radio" name="q29" value="C"> A) Plastic packaging banned.</label>
+                <label><input type="radio" name="q29" value="B"> B) Banned plastic packaging should.</label>
+                <label><input type="radio" name="q29" value="A"> C) Plastic packaging should be banned.</label>
+                <label><input type="radio" name="q29" value="D"> D) Should ban plastic packaging.</label>
+            </div>
+
+            <div class="question-box" id="box-q30">
+                <div class="question-title">30. I'm writing to tell you how bothered I am about... (Rewrite using express)</div>
+                <label><input type="radio" name="q30" value="D"> A) My writing expresses...</label>
+                <label><input type="radio" name="q30" value="C"> B) I write to expression...</label>
+                <label><input type="radio" name="q30" value="B"> C) Expressing I am about...</label>
+                <label><input type="radio" name="q30" value="A"> D) I am writing to express my concern about...</label>
+            </div>
+
+            <div class="question-box" id="box-q31">
+                <div class="question-title">31. You should look into other options. (Rewrite using investigate)</div>
+                <label><input type="radio" name="q31" value="A"> A) I would ask you to investigate alternative options.</label>
+                <label><input type="radio" name="q31" value="B"> B) Investigate you should options.</label>
+                <label><input type="radio" name="q31" value="C"> C) Options are investigated by you.</label>
+                <label><input type="radio" name="q31" value="D"> D) You investigate options.</label>
+            </div>
+
+            <div class="question-box" id="box-q32">
+                <div class="question-title">32. It's important to do this right away. (Rewrite using essential)</div>
+                <label><input type="radio" name="q32" value="B"> A) Essential is doing this.</label>
+                <label><input type="radio" name="q32" value="A"> B) It is essential to take immediate action.</label>
+                <label><input type="radio" name="q32" value="C"> C) This is essential immediately.</label>
+                <label><input type="radio" name="q32" value="D"> D) Doing this is essentials.</label>
+            </div>
+
+            <div class="question-box" id="box-q33">
+                <div class="question-title">33. You must do it now. (Rewrite using urgency)</div>
+                <label><input type="radio" name="q33" value="C"> A) It is urgency to do.</label>
+                <label><input type="radio" name="q33" value="B"> B) Urgently you must do it.</label>
+                <label><input type="radio" name="q33" value="A"> C) This must be done as a matter of urgency.</label>
+                <label><input type="radio" name="q33" value="D"> D) Do it with urgency now.</label>
+            </div>
+
+            <button type="button" id="submit-btn" onclick="checkFirstRound()">إنهاء الاختبار وعرض النتيجة الأولى</button>
+        </form>
+
+        <!-- قسم تصحيح الأخطاء المنفصل (يظهر عند وجود أخطاء) -->
+        <div id="retry-section">
+            <h2>🛠️ شاشة تصحيح الأخطاء</h2>
+            <p style="text-align: center; color: #d35400; font-weight: bold;">هذه هي الأسئلة التي أخطأت فيها. اختر الإجابة الصحيحة لكل سؤال ثم اضغط زر تقييم التصحيح:</p>
+            <div id="wrong-questions-container"></div>
+            <button type="button" id="retry-btn" onclick="checkSecondRound()">تقييم جولة التصحيح وعرض النتيجة النهائية</button>
+        </div>
+
+        <!-- صندوق عرض النتيجتين معاً -->
+        <div id="results-container">
+            <h2>📊 تقرير النتيجتين</h2>
+            <div class="score-box" id="first-score-display"></div>
+            <div class="score-box" id="final-score-display"></div>
+        </div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: 'A',
+            q2: 'A',
+            q3: 'A',
+            q4: 'A',
+            q5: 'A',
+            q6: 'A',
+            q7: 'A',
+            q8: 'A',
+            q9: 'A',
+            q10: 'A',
+            q11: 'A',
+            q12: 'A',
+            q13: 'A',
+            q14: 'A',
+            q15: 'A',
+            q16: 'A',
+            q17: 'A',
+            q18: 'A',
+            q19: 'A',
+            q20: 'A',
+            q21: 'A',
+            q22: 'A',
+            q23: 'A',
+            q24: 'A',
+            q25: 'A',
+            q26: 'A',
+            q27: 'A',
+            q28: 'A',
+            q29: 'A',
+            q30: 'A',
+            q31: 'A',
+            q32: 'A',
+            q33: 'A'
+        };
+
+        let wrongKeys = [];
+        let initialScore = 0;
+        const total = 33;
+
+        function checkFirstRound() {
+            initialScore = 0;
+            wrongKeys = [];
+
+            // حساب النتيجة الأولى
+            for (let key in correctAnswers) {
+                let userAnswer = document.querySelector(`input[name="${key}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[key]) {
+                    initialScore++;
+                } else {
+                    wrongKeys.push(key);
+                }
+            }
+
+            // إخفاء الامتحان الأصلي
+            document.getElementById('quizForm').style.display = 'none';
+
+            if (wrongKeys.length > 0) {
+                // جلب نفس الأسئلة التي أخطأ فيها الطالب وعرضها في قسم التصحيح مع خياراتها
+                let container = document.getElementById('wrong-questions-container');
+                container.innerHTML = '';
+
+                wrongKeys.forEach(key => {
+                    let originalBox = document.getElementById(`box-${key}`);
+                    let clone = originalBox.cloneNode(true);
+
+                    // تفريغ الاختيارات ليختار منها مجدداً
+                    clone.querySelectorAll('input[type="radio"]').forEach(radio => {
+                        radio.checked = false;
+                    });
+
+                    // تعديل اسم الـ name للخيارات داخل شاشة التصحيح لكي لا يتداخل مع النموذج المخفي
+                    // سنضع له بادئة retry_ لنتمكن من قراءته بسهولة
+                    clone.querySelectorAll('input[type="radio"]').forEach(radio => {
+                        radio.name = "retry_" + key;
+                    });
+
+                    container.appendChild(clone);
+                });
+
+                // إظهار قسم التصحيح
+                document.getElementById('retry-section').style.display = 'block';
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                // إذا لم تكن هناك أخطاء، اعرض النتيجة مباشرة
+                let resContainer = document.getElementById('results-container');
+                document.getElementById('first-score-display').innerHTML = `⭐ <strong>النتيجة الأولى:</strong> ${initialScore} من ${total} (${Math.round((initialScore/total)*100)}%) - ممتاز! لا توجد أخطاء.`;
+                document.getElementById('final-score-display').innerHTML = `🏆 <strong>النتيجة النهائية:</strong> ${initialScore} من ${total} (100%)`;
+                resContainer.style.display = 'block';
+                resContainer.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function checkSecondRound() {
+            let additionalScore = 0;
+
+            // فحص إجابات الأسئلة في شاشة التصحيح
+            wrongKeys.forEach(key => {
+                let userAnswer = document.querySelector(`input[name="retry_${key}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[key]) {
+                    additionalScore++;
+                }
+            });
+
+            let finalScore = initialScore + additionalScore;
+
+            // إخفاء شاشة التصحيح وإظهار تقرير النتيجتين معاً
+            document.getElementById('retry-section').style.display = 'none';
+
+            let resContainer = document.getElementById('results-container');
+            document.getElementById('first-score-display').innerHTML = `⭐ <strong>النتيجة الأولى (قبل التصحيح):</strong> ${initialScore} من ${total} (${Math.round((initialScore/total)*100)}%)`;
+            document.getElementById('final-score-display').innerHTML = `🏆 <strong>النتيجة النهائية (بعد التصحيح):</strong> ${finalScore} من ${total} (${Math.round((finalScore/total)*100)}%)<br><span style="color:#27ae60; font-size:16px;">أحسنت يا م. إبراهيم، لقد استدركت الأخطاء بنجاح!</span>`;
+
+            resContainer.style.display = 'block';
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+
+</html>
